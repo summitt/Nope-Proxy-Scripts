@@ -38,7 +38,7 @@ def postIntercept(input, isC2S):
 
 def formatOnly(input,isC2S):
 	if input[0] == 0x82 or input[0] == 0x02:
-		pbuf =  serverDecode(getFullWebSocketPayload(input))
+		pbuf =  getFullWebSocketPayload(input)
 		return bytearray(pbuf)
 	else:
 		return input
